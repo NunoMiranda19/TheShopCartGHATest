@@ -55,9 +55,7 @@ namespace ShopCartApp
             {
                 Console.WriteLine($"{item.Id}-{item.Name}-{item.Quantity}-{item.Price}-{item.TotalPrice}");
             }
-            {
-
-            }
+            
 
             Conso  le.WriteLine("End Shop App");
         }
