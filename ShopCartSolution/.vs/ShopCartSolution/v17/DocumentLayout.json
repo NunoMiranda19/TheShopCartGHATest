@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Work\\Repos\\TheShopCartGHATest\\ShopCartSolution\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B812DCDC-08E3-4EDA-9153-C6353103609D}|ShopCartApp\\ShopCartApp.csproj|c:\\work\\repos\\theshopcartghatest\\shopcartsolution\\shopcartapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B812DCDC-08E3-4EDA-9153-C6353103609D}|ShopCartApp\\ShopCartApp.csproj|solutionrelative:shopcartapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B812DCDC-08E3-4EDA-9153-C6353103609D}|ShopCartApp\\ShopCartApp.csproj|c:\\work\\repos\\theshopcartghatest\\shopcartsolution\\shopcartapp\\implementations\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B812DCDC-08E3-4EDA-9153-C6353103609D}|ShopCartApp\\ShopCartApp.csproj|solutionrelative:shopcartapp\\implementations\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Work\\Repos\\TheShopCartGHATest\\ShopCartSolution\\ShopCartApp\\Implementations\\Cart.cs",
+              "RelativeDocumentMoniker": "ShopCartApp\\Implementations\\Cart.cs",
+              "ToolTip": "C:\\Work\\Repos\\TheShopCartGHATest\\ShopCartSolution\\ShopCartApp\\Implementations\\Cart.cs",
+              "RelativeToolTip": "ShopCartApp\\Implementations\\Cart.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwCcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:20:52.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\Repos\\TheShopCartGHATest\\ShopCartSolution\\ShopCartApp\\Program.cs",
+              "RelativeDocumentMoniker": "ShopCartApp\\Program.cs",
+              "ToolTip": "C:\\Work\\Repos\\TheShopCartGHATest\\ShopCartSolution\\ShopCartApp\\Program.cs",
+              "RelativeToolTip": "ShopCartApp\\Program.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAD0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:10:14.776Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

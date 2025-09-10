@@ -1,0 +1,14 @@
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.AssemblyInfoInputs.cache
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.AssemblyInfo.cs
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.csproj.CoreCompileInputs.cache
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.sourcelink.json
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.exe
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.deps.json
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.runtimeconfig.json
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.runtimeconfig.dev.json
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.dll
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\bin\Debug\netcoreapp3.1\ShopCartApp.pdb
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.dll
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.pdb
+C:\Work\Repos\TheShopCartGHATest\ShopCartSolution\ShopCartApp\obj\Debug\netcoreapp3.1\ShopCartApp.genruntimeconfig.cache
