@@ -1,24 +1,23 @@
-name: Unit Tests
+name: Tests
 
 on:
-  workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET Core
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '3.1.x'
+          dotnet-version: '8.0.x'
 
       - name: Download build artifacts
         uses: actions/download-artifact@v4
@@ -26,5 +25,5 @@ jobs:
           name: build-output
           path: ./publish
 
-      - name: Run unit tests
+      - name: Run tests
         run: dotnet test --configuration Release --no-build
