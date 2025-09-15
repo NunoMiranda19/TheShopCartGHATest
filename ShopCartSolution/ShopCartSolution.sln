@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopCartApp", "ShopCartApp\ShopCartApp.csproj", "{B812DCDC-08E3-4EDA-9153-C6353103609D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartUnitTests", "CartUnitTests\CartUnitTests.csproj", "{FB945A08-B902-4A54-B351-5B60D990EED7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopCartUnitTests", "ShopCartUnitTests\ShopCartUnitTests.csproj", "{82B5725F-2608-4D8E-B4B7-0BBBC2B84EAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B812DCDC-08E3-4EDA-9153-C6353103609D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B812DCDC-08E3-4EDA-9153-C6353103609D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B812DCDC-08E3-4EDA-9153-C6353103609D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB945A08-B902-4A54-B351-5B60D990EED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB945A08-B902-4A54-B351-5B60D990EED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB945A08-B902-4A54-B351-5B60D990EED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB945A08-B902-4A54-B351-5B60D990EED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B5725F-2608-4D8E-B4B7-0BBBC2B84EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B5725F-2608-4D8E-B4B7-0BBBC2B84EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B5725F-2608-4D8E-B4B7-0BBBC2B84EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B5725F-2608-4D8E-B4B7-0BBBC2B84EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
