@@ -54,12 +54,9 @@ namespace ShopCartApp
             foreach (var item in cart.GetAll())
             {
                 Console.WriteLine($"{item.Id}-{item.Name}-{item.Quantity}-{item.Price}-{item.TotalPrice}");
-            }
-            {
+            }            
 
-            }
-
-            Conso  le.WriteLine("End Shop App");
+            Console.WriteLine("End Shop App");
         }
     }
 }
