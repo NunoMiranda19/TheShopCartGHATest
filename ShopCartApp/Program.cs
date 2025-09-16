@@ -7,7 +7,7 @@ namespace ShopCartApp
     internal class Program
     {
         static void Main(string[] args)
-        { aaaaa
+        {
             Console.WriteLine("Start Shop App");
 
             var itemId1 = Guid.NewGuid();
