@@ -5,7 +5,7 @@ using System;
 namespace ShopCartApp
 {
     internal class Program
-    {
+    { a
         static void Main(string[] args)
         {
             Console.WriteLine("Start Shop App");
