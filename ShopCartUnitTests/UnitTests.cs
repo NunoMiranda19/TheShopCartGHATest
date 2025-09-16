@@ -40,6 +40,12 @@ namespace ShopCartUnitTests
                 && items.First().Id == itemnId);
         }
 
+        [Test]
+        public void Test2()
+        {
+            Assert.Fail();
+        }
+
         private static ICart GetShopCart()
         {
             return new Cart();
