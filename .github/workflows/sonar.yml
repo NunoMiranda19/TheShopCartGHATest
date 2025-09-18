@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # obrigatório p/ Sonar analisar histórico
+          fetch-depth: 0  # necessário para análise completa
 
       - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
@@ -30,8 +30,8 @@ jobs:
       - name: Begin Sonar analysis
         run: |
           dotnet sonarscanner begin \
-            /k:"NunoMiranda19" \
-            /o:"nunomiranda19" \
+            /k:"nunomiranda19" \
+            /o:"NunoMiranda19" \
             /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml
@@ -40,7 +40,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Run tests with coverage
-        run: dotnet test --configuration Release --no-build \
+        run: dotnet test TheShopCartGHATest.sln --configuration Release --no-build \
              /p:CollectCoverage=true \
              /p:CoverletOutput=TestResults/ \
              /p:CoverletOutputFormat=opencover
