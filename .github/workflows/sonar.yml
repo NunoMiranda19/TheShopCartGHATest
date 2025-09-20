@@ -40,7 +40,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Run tests with coverage
-        run: dotnet test TheShopCartGHATest.sln --configuration Release --no-build \
+        run: dotnet test ShopCartUnitTests/ShopCartUnitTests.csproj --configuration Release --no-build \
              /p:CollectCoverage=true \
              /p:CoverletOutput=TestResults/coverage.opencover.xml \
              /p:CoverletOutputFormat=opencover
