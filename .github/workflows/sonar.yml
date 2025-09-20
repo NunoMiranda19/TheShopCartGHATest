@@ -1,0 +1,7 @@
+dotnet sonarscanner begin \
+  /k:"nunomiranda19_TheShopCartGHATest" \
+  /o:"nunomiranda19" \
+  /d:sonar.login=${{ secrets.SONAR_TOKEN }} \
+  /d:sonar.exclusions=**/*.yml,**/*.yaml,**/*.json \
+  /d:sonar.cs.opencover.reportsPaths=TestResults/coverage.opencover.xml \
+  /d:sonar.qualitygate.wait=true
