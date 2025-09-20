@@ -30,7 +30,7 @@ jobs:
       - name: Begin SonarCloud analysis
         run: |
           dotnet sonarscanner begin \
-            /k:"nunomiranda19_TheShopCartGHATest" \
+            /k:"NunoMiranda19_TheShopCartGHATest" \
             /o:"nunomiranda19" \
             /d:sonar.login=${{ secrets.SONAR_TOKEN }} \
             /d:sonar.exclusions=**/*.yml,**/*.yaml,**/*.json \
