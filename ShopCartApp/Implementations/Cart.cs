@@ -16,14 +16,14 @@ namespace ShopCartApp.Implementations
             var item = GetIfExists(product.Id);
 
             if (item == null)
-                _items.Add(product);
+                _items.Add(product); 
             else
                 item.Quantity += item.Quantity;
         }
 
         public IEnumerable<CartProduct> GetAll()
         {
-            return _items;
+            return _items; 
         }
 
         public void Remove(Guid productId, int quantity)
@@ -33,7 +33,7 @@ namespace ShopCartApp.Implementations
             if(item == null)
                 throw new DllNotFoundException($"Cannot find product '{productId}'.");
 
-            item.Quantity -= quantity;
+            item.Quantity -= quantity; 
 
             if (item.Quantity <= 0)
                 _items.Remove(item);
@@ -41,7 +41,7 @@ namespace ShopCartApp.Implementations
 
         private CartProduct GetIfExists(Guid productId)
         {
-            return _items.FirstOrDefault(
+            return _items.FirstOrDefault( 
                 it => it.Id == productId);                
         }
     }
