@@ -1,4 +1,4 @@
-name: SonarQube Analysis
+name: SonarCloud Analysis
 
 on:
   push:
@@ -27,15 +27,14 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Begin Sonar analysis
+      - name: Begin SonarCloud analysis
         run: |
           dotnet sonarscanner begin \
-            /k:"nunomiranda19" \
-            /o:"NunoMiranda19" \
-            /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" \
-            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
-            /d:sonar.exclusions="**/*.yml,**/*.yaml,**/*.json" \
-            /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml
+            /k:"nunomiranda19_TheShopCartGHATest" \
+            /o:"nunomiranda19" \
+            /d:sonar.login=${{ secrets.SONAR_TOKEN }} \
+            /d:sonar.exclusions=**/*.yml,**/*.yaml,**/*.json \
+            /d:sonar.cs.opencover.reportsPaths=TestResults/coverage.opencover.xml
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
@@ -43,8 +42,8 @@ jobs:
       - name: Run tests with coverage
         run: dotnet test TheShopCartGHATest.sln --configuration Release --no-build \
              /p:CollectCoverage=true \
-             /p:CoverletOutput=TestResults/ \
+             /p:CoverletOutput=TestResults/coverage.opencover.xml \
              /p:CoverletOutputFormat=opencover
 
-      - name: End Sonar analysis
-        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      - name: End SonarCloud analysis
+        run: dotnet sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}
