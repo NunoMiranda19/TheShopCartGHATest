@@ -23,7 +23,7 @@ namespace ShopCartApp.Implementations
 
         public IEnumerable<CartProduct> GetAll()
         {
-            return _items; 
+            return null; 
         }
 
         public void Remove(Guid productId, int quantity)
@@ -35,8 +35,8 @@ namespace ShopCartApp.Implementations
 
             item.Quantity -= quantity; 
 
-            if (item.Quantity <= 0)
-                _items.Remove(item);
+            //if (item.Quantity <= 0)
+            //    _items.Remove(item);
         }
 
         private CartProduct GetIfExists(Guid productId)
