@@ -26,6 +26,16 @@ namespace ShopCartApp.Implementations
             return _items;
         }
 
+        public IEnumerable<CartProduct> GetAll2()
+        {
+            return _items;
+        }
+
+        public IEnumerable<CartProduct> GetAll3()
+        {
+            return _items;
+        }
+
         public void Remove(Guid productId, int quantity)
         {
             var item = GetIfExists(productId);

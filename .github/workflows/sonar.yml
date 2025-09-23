@@ -1,7 +1,58 @@
-dotnet sonarscanner begin \
-  /k:"nunomiranda19_TheShopCartGHATest" \
-  /o:"nunomiranda19" \
-  /d:sonar.login=${{ secrets.SONAR_TOKEN }} \
-  /d:sonar.exclusions=**/*.yml,**/*.yaml,**/*.json \
-  /d:sonar.cs.opencover.reportsPaths=TestResults/coverage.opencover.xml \
-  /d:sonar.qualitygate.wait=true
+name: Build and SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # necessário para sonar
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install SonarScanner
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      - name: Restore dependencies
+        run: dotnet restore YourSolution.sln
+
+      - name: Begin SonarQube Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: >
+          dotnet sonarscanner begin
+          /k:"SEU_PROJECT_KEY"
+          /o:"SEU_ORG"
+          /d:sonar.host.url="https://sonarcloud.io"
+          /d:sonar.login="${SONAR_TOKEN}"
+          /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.opencover.xml"
+
+      - name: Build solution
+        run: dotnet build YourSolution.sln --no-restore --configuration Release
+
+      - name: Run tests with coverage
+        run: >
+          dotnet test YourSolution.sln
+          --no-build
+          --configuration Release
+          /p:CollectCoverage=true
+          /p:CoverletOutputFormat=opencover
+          /p:CoverletOutput=TestResults/coverage.opencover.xml
+
+      - name: End SonarQube Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: dotnet sonarscanner end /d:sonar.login="${SONAR_TOKEN}"

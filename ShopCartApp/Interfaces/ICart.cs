@@ -10,5 +10,9 @@ namespace ShopCartApp.Interfaces
         void Add(CartProduct product);
         void Remove(Guid productId,int quantity);
         IEnumerable<CartProduct> GetAll();
+
+        IEnumerable<CartProduct> GetAll2();
+
+        IEnumerable<CartProduct> GetAll3();
     }
 }
