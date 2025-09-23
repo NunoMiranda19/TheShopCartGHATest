@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -29,16 +29,30 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore YourSolution.sln
 
+      - name: Begin SonarQube Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: >
+          dotnet sonarscanner begin
+          /k:"SEU_PROJECT_KEY"
+          /o:"SEU_ORG"
+          /d:sonar.host.url="https://sonarcloud.io"
+          /d:sonar.login="${SONAR_TOKEN}"
+          /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.opencover.xml"
+
       - name: Build solution
         run: dotnet build YourSolution.sln --no-restore --configuration Release
 
       - name: Run tests with coverage
-        run: dotnet test YourSolution.sln --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+        run: >
+          dotnet test YourSolution.sln
+          --no-build
+          --configuration Release
+          /p:CollectCoverage=true
+          /p:CoverletOutputFormat=opencover
+          /p:CoverletOutput=TestResults/coverage.opencover.xml
 
-      - name: Run SonarQube Analysis
+      - name: End SonarQube Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          dotnet sonarscanner begin /k:"NunoMiranda19_TheShopCartGHATest" /d:sonar.host.url="https://sonarcloud.io" /o:"SEU_ORG" /d:sonar.login="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.opencover.xml"
-          dotnet build ShopCartSolution.sln --no-incremental
-          dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN"
+        run: dotnet sonarscanner end /d:sonar.login="${SONAR_TOKEN}"
