@@ -39,6 +39,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          dotnet sonarscanner begin /k:"SEU_PROJECT_KEY" /d:sonar.host.url="https://sonarcloud.io" /o:"SEU_ORG" /d:sonar.login="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.opencover.xml"
-          dotnet build YourSolution.sln --no-incremental
+          dotnet sonarscanner begin /k:"NunoMiranda19_TheShopCartGHATest" /d:sonar.host.url="https://sonarcloud.io" /o:"SEU_ORG" /d:sonar.login="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.opencover.xml"
+          dotnet build ShopCartSolution.sln --no-incremental
           dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN"
